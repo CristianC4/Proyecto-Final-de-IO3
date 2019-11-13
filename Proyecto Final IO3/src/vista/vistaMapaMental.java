@@ -5,16 +5,18 @@
  */
 package vista;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author C4
  */
-public class vistaVisual extends javax.swing.JFrame {
+public class vistaMapaMental extends javax.swing.JFrame {
 
     /**
-     * Creates new form vistaVisual
+     * Creates new form vistaMapaMental
      */
-    public vistaVisual() {
+    public vistaMapaMental() {
         initComponents();
     }
 
@@ -27,22 +29,31 @@ public class vistaVisual extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jLabel2 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Aprendizaje Visual");
+        setTitle("Mapa Mental");
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Teoría Bayesiana de la Decisión.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        jScrollPane1.setViewportView(jLabel2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1448, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 491, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

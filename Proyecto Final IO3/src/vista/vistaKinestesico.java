@@ -5,6 +5,8 @@
  */
 package vista;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author C4
@@ -14,7 +16,14 @@ public class vistaKinestesico extends javax.swing.JFrame {
     /**
      * Creates new form vistaKinestesico
      */
+    
+    private vistaMapaMental vistaMapa;
+    private vistaAprenderK vistaAprender;
     public vistaKinestesico() {
+        JOptionPane.showMessageDialog(null," Metodo de aprendizaje mediante el cual \n"
+                + "la información se afianza asociándola a las \nsensaciones, movimientos y experiencias"  ,"Aprendizaje Kinestesico", JOptionPane.INFORMATION_MESSAGE);
+        vistaMapa = new vistaMapaMental();
+        vistaAprender = new vistaAprenderK();
         initComponents();
     }
 
@@ -27,22 +36,104 @@ public class vistaKinestesico extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jToggleButton1 = new javax.swing.JToggleButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Aprendizaje Kinestesico");
+
+        jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        jLabel1.setText("Teoria Bayesiana de la Decision");
+
+        jLabel2.setText("Por favor lea el siguiente texto e intente interiorizarlo:");
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("La teoría bayesiana de la decisión es un conjunto de alternativas que\ndan solución a un problema teniendo en cuenta o no sucesos que ya han \nsucedido ( a priori y a posteriori ), usando entonces la teoría de \nbayes para escoger entre las posibles soluciones la mejor de ellas, \ny además usando unos criterios previamente establecidos:\n\nMaximax: Posibilidad optimista\nHurwitz: Combina pesimista y optimista\nSavage (Minimax): Menos conservador que maximin\nWald (Maximin): Minimiza la pérdida\nLaplace: Evalúa distintas alternativas\nA posteriori: Estimaciones de probabilidades con respecto a \notro asociado\n\nDentro de sus posibles aplicaciones encontramos :\n*Redes neuronales\n*Mecánica cuántica\n*Análisis de costos\n*Decisiones médicas");
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jLabel3.setText("Lo siguiente es realizar un mapa mental con la anterior informacion, al terminar de realizar el mapa mental ");
+
+        jLabel4.setText("de click en el boton");
+
+        jToggleButton1.setText("Siguiente");
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(193, 193, 193)
+                                .addComponent(jLabel1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel2))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(42, 42, 42)
+                                .addComponent(jLabel3)))
+                        .addGap(0, 61, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(250, 250, 250)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        
+        JOptionPane.showMessageDialog(null, "El siguiente es un mapa mental elaborado por el Grupo N°1\ncon toda la"
+                + "informacion necesaria para la teoria, por favor compare y complete su mapa mental", "Mapa Mental",JOptionPane.WARNING_MESSAGE);
+        vistaMapa.setVisible(true);
+        vistaAprender.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
 }
